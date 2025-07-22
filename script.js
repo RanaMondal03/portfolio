@@ -100,3 +100,17 @@ function createParticle() {
 
 // Create particles periodically
 setInterval(createParticle, 3000);
+
+// --- Back to Top Button Logic ---
+const backToTopButton = document.getElementById('back-to-top');
+
+if (backToTopButton) {
+    // Show button when user scrolls down
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 400) { // Show after 400px of scrolling
+            backToTopButton.classList.add('show');
+        } else {
+            backToTopButton.classList.remove('show');
+        }
+    });
+}
