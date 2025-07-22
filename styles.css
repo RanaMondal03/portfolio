@@ -352,9 +352,10 @@ section {
 
 .projects-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-    gap: 3rem;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 350px), 1fr));
+    gap: 2rem;
     margin-top: 3rem;
+    padding: 0 1rem;
 }
 
 .project-card {
@@ -364,6 +365,8 @@ section {
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
     transition: all 0.3s ease;
     position: relative;
+    width: 100%;
+    max-width: 100%;
 }
 
 .project-card:hover {
@@ -401,6 +404,8 @@ section {
     display: flex;
     gap: 0.5rem;
     margin-top: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .tag {
